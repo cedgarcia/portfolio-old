@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BG, Desktop } from '../styles/Background.styles';
-
+import { Intro } from './Intro';
 export const BackgroundContainer = (props) => {
   if (typeof window === 'object') {
     const pos = document.documentElement;
@@ -9,9 +9,8 @@ export const BackgroundContainer = (props) => {
       pos.style.setProperty('--y', +e.clientY + 'px');
     });
   }
-  // Desktop
-  const Dhorizontals = ['', '', '', ''];
-  const Dverticals = ['', '', '', ''];
+  const Dhorizontals = ['', '', ''];
+  const Dverticals = ['', '', '', '', '', '', ''];
 
   return (
     <BG>

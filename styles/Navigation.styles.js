@@ -2,101 +2,93 @@ import styled from 'styled-components';
 
 export const NavWrap = styled.nav`
   position: fixed;
-  /* right: 5vw; */
-  padding: 5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;
-  z-index: 100;
-  /* top: 5vh; */
-  .arrow {
-    display: inline-block;
+  top: 7rem;
+  left: 0;
+  right: 0;
+  padding: 0 8rem;
+  /* bottom: 0; */
+
+  width: 100vw;
+  /* height: 10rem; */
+  /* background-color: red; */
+  z-index: 1000;
+
+  .activeLink {
+    &::after {
+      transition: 2s;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      background: white;
+      height: 1px;
+      right: auto;
+      width: 100%;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    font-size: 1.5rem;
     position: relative;
-    width: 2rem;
-    height: 2rem;
-    background: transparent;
-    text-indent: -9999px;
-    border-top: 3px solid var(--white);
-    border-left: 3px solid var(--white);
-    /* border-radius: 8px; */
-    transition: all 250ms ease-in-out;
-    text-decoration: none;
-    color: transparent;
-  }
-  .prev {
-    /* position: absolute; */
-    /* right: 2.7rem; */
-    /* position: relative; */
-    transform: rotate(-45deg);
-  }
-  .next {
-    /* position: ${({ open }) => (open ? 'relative' : 'absolute')}; */
-    /* position: absolute;
-    left: 6rem; */
-    /* width: ${({ open }) => (open ? '0px' : '30px')}; */
-    /* left: 2.7rem; */
-    /* position: absolute; */
-    /* left: 2.7rem; */
-    transform: rotate(135deg);
-  }
-`;
+    overflow: hidden;
+    letter-spacing: 2px;
 
-export const NavLogo = styled.div`
-  border-radius: ${({ open }) => (open ? '50%' : '0%')};
-  transition: 1s;
-  cursor: pointer;
-  color: black;
-  /* padding: 0 1rem; */
-  background: var(--green);
-  height: 10rem;
-  width: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  .burger {
-    cursor: pointer;
-    .lines {
-      height: 3px;
-      width: 30px;
-      background: var(--white);
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-    .lines:nth-child(1) {
-      width: ${({ open }) => (open ? '0px' : '30px')};
-      transition-delay: 0s;
-    }
-    .lines:nth-child(2) {
-      width: ${({ open }) => (open ? '0px' : '25px')};
-      transition-delay: 0.2s;
-    }
-    .lines:nth-child(3) {
-      width: ${({ open }) => (open ? '0px' : '20px')};
-      transition-delay: 0.3s;
-    }
+    display: inline;
+    position: relative;
+    overflow: hidden;
   }
-  .slash {
+  a::after {
+    content: '';
     position: absolute;
-    right: 2.6rem;
-    background: var(--white);
-    height: 4.5rem;
-    transition: 0.5s;
-    height: ${({ open }) => (open ? '0px' : '4.5rem')};
+    right: 0;
+    bottom: 0;
+    background: white;
+    width: 0;
+    height: 1px;
 
-    transform: rotate(15deg);
-    width: 3px;
+    transition: width 0.4s ease-out;
   }
-  /* position: absolute; */
+  a:active::after,
+  a:focus::after,
+  a:hover::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 `;
+
 export const NavList = styled.div`
-  writing-mode: vertical-rl;
-  text-orientation: sideways;
+  z-index: 1000;
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  .link {
-    font-size: 2rem;
+  /* height: 7rem; */
+  font-size: 3rem;
+  /* a {
+    position: relative;
+    overflow: hidden;
+
+    display: inline;
+    position: relative;
+    overflow: hidden;
   }
+  a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    width: 0;
+    height: 3px;
+
+    transition: width 0.4s ease-out;
+  }
+  a:active::after,
+  a:focus::after,
+  a:hover::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  } */
 `;

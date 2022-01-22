@@ -1,31 +1,27 @@
-import { NavWrap, NavLogo, NavList } from '../styles/Navigation.styles';
-import { useState } from 'react';
-import { Burger } from './Burger';
-export const Navigation = () => {
-  const [open, setOpen] = useState(false);
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { NavWrap } from '../styles/Navigation.styles';
+const navLinks = [
+  { title: 'Works', path: '/' },
+  { title: 'About me', path: '/about' },
+  { title: 'Contact', path: '/contact' },
+];
 
+export const Navigation = () => {
+  const router = useRouter();
   return (
     <NavWrap>
-      <NavLogo open={open} onClick={() => setOpen(!open)}>
-        <div className="arrow prev"></div>
-        <div className="burger" open={open} onClick={() => setOpen(!open)}>
-          <div className="lines"></div>
-          <div className="lines"></div>
-          <div className="lines"></div>
-        </div>{' '}
-        <div className="slash"></div>
-        <div className="arrow next"></div>
-      </NavLogo>
-      <NavList>
-        <div className="link">Projects</div>
-        <div className="link">Projects</div>
-        <div className="link">Projects</div>
-      </NavList>
-      <NavLogo>
-        <div className="arrow prev"></div>
-
-        <div className="arrow next"></div>
-      </NavLogo>
+      <ul>
+        {navLinks.map((link) => (
+          <li key={link.title}>
+            <Link href={link.path} passHref>
+              <a className={router.pathname === link.path ? 'activeLink' : ''}>
+                {link.title}
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </NavWrap>
   );
 };

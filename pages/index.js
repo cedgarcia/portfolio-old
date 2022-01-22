@@ -5,7 +5,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { BackgroundContainer } from '../components/BackgroundContainer';
 import { HomeContainer } from '../components/HomeContainer';
-
+import { Intro } from '../components/Intro';
+import { Navigation } from '../components/Navigation';
 const BackgroundWrap = styled.div`
   position: fixed;
   width: 100%;
@@ -16,7 +17,7 @@ const Background = ({ setLoaded }) => {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 3000);
+    }, 100);
   }, [setLoaded]);
 
   return <BackgroundContainer />;
@@ -29,9 +30,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   return (
     <>
-      {/* <BackgroundWrap> */}
+      <Navigation />
       <Background setLoaded={setLoading} />
-      {/* </BackgroundWrap> */}
       {loading && <HomeContent />}
     </>
   );

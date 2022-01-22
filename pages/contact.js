@@ -1,13 +1,12 @@
 import { BackgroundContainer } from '../components/BackgroundContainer';
 import { Navigation } from '../components/Navigation';
-export default function blog() {
+
+export default function contact() {
   return (
     <div>
-      <>
-         <Navigation />
-         <BackgroundContainer>blog</BackgroundContainer>
-        
-      </>
+      <Navigation />
+      <BackgroundContainer />
+      Contact
     </div>
   );
 }
