@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 import { Horizontal, Vertical, Hide } from '../styles/animations';
 export const BG = styled.div`
+  .logo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    transition: 4s;
+    height: 7rem;
+    width: 7rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
   position: fixed;
   z-index: 0;
   height: 100vh;
@@ -53,7 +66,7 @@ export const BG = styled.div`
     left: 7rem;
     animation-duration: 0.5s;
   }
-  /* .vertical:nth-child(2) {
+  .vertical:nth-child(2) {
     left: 21.5vw;
     animation-duration: 1s;
   }
@@ -72,7 +85,7 @@ export const BG = styled.div`
   .vertical:nth-child(6) {
     right: 16vw;
     animation-duration: 2s;
-  } */
+  }
   .vertical:nth-child(7) {
     right: 7rem;
     animation-duration: 2.5s;

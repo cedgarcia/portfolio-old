@@ -1,12 +1,11 @@
 import { BackgroundContainer } from '../components/BackgroundContainer';
-import { Navigation } from '../components/Navigation';
+import { Navbar } from '../components/Navbar';
 export default function blog() {
   return (
     <div>
       <>
-         <Navigation />
-         <BackgroundContainer>blog</BackgroundContainer>
-        
+        <Navbar />
+        <BackgroundContainer>blog</BackgroundContainer>
       </>
     </div>
   );

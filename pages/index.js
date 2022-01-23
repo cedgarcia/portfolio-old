@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { BackgroundContainer } from '../components/BackgroundContainer';
 import { HomeContainer } from '../components/HomeContainer';
 import { Intro } from '../components/Intro';
-import { Navigation } from '../components/Navigation';
+import { Navbar } from '../components/Navbar';
 const BackgroundWrap = styled.div`
   position: fixed;
   width: 100%;
@@ -30,7 +30,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   return (
     <>
-      <Navigation />
+      <Navbar />
       <Background setLoaded={setLoading} />
       {loading && <HomeContent />}
     </>
