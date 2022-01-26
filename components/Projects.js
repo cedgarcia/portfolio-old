@@ -14,7 +14,7 @@ const ProjectsWrap = styled.div`
     padding: 0;
   }
   @media (max-width: 768px) {
-    margin: 0;
+    margin: 0 auto;
   }
   .project {
     padding: 2rem;
@@ -53,12 +53,18 @@ const ProjectsWrap = styled.div`
       text-align: right;
       @media (max-width: 768px) {
         text-align: left;
-        transform: translateX(0);
+        transform: translate(0, -25rem);
+        background-color: var(--black);
+        opacity: 0.7;
+        width: 100%;
       }
       h3 {
         font-size: 2.5rem;
         transition: 0.3s ease-in-out;
         &:hover {
+          color: var(--green);
+        }
+        @media (max-width: 768px) {
           color: var(--green);
         }
       }
@@ -81,6 +87,9 @@ const ProjectsWrap = styled.div`
     font-size: 1.4rem;
     margin: 2rem 0;
     padding: 2rem;
+    @media (max-width: 968px) {
+      width: 34rem;
+    }
     @media (max-width: 912px) {
       width: 30rem;
     }
@@ -116,13 +125,13 @@ export const Projects = () => {
       {projectsData.map(
         ({ id, title, description, image, github, live, techs }) => (
           <div className="project" key={id}>
-            <a href={live} target="_blank">
+            <a href={live} target="_blank" rel="noopener noreferrer">
               <div className="image">
                 <img src={image} />
               </div>
             </a>
             <div className="info">
-              <a href={live} target="_blank">
+              <a href={live} target="_blank" rel="noopener noreferrer">
                 <h3>{title}</h3>
               </a>
               <p className="description">{description}</p>
@@ -132,7 +141,7 @@ export const Projects = () => {
                 ))}
               </div>
               <div className="links">
-                <a href={github} target="_blank">
+                <a href={github} target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
@@ -153,7 +162,7 @@ export const Projects = () => {
                     ></path>
                   </svg>
                 </a>
-                <a href={live} target="_blank">
+                <a href={live} target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
