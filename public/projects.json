@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Planets Fact",
+    "description": "A website that displays certain information about the selected planet. Mapped data from a JSON file and used hooks in handling states.",
+    "image": "/images/projects/planets-fact.png",
+    "github": "https://github.com/cedcodes/planets-fact",
+    "live": "https://ced-planets-fact.netlify.app/",
+    "techs": ["React", "Styled-Components", "Netlify"]
+  },
+  {
+    "id": 2,
+    "title": "Photosnap",
+    "description": "Used ",
+    "image": "/images/projects/photosnap.png",
+    "github": "https://github.com/cedcodes/Photosnap",
+    "live": "https://ced-photosnap.netlify.app/",
+    "techs": ["React", "React-router-v6", "Styled-Components"]
+  }
+]

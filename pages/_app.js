@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import { GlobalStyle, Fonts } from '../styles/GlobalStyle';
-
+import { GlobalStyle } from '../styles/GlobalStyle';
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -17,9 +16,9 @@ function MyApp({ Component, pageProps }) {
         />
 
         <link
-          href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Audiowide&family=Fira+Sans&family=Orbitron:wght@400;500;700&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </Head>
       <Component {...pageProps} />
       <GlobalStyle />

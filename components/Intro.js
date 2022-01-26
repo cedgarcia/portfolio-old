@@ -1,44 +1,55 @@
-import styled, { keyframes } from 'styled-components';
-import { BackgroundContainer } from './BackgroundContainer';
-const subTextReveal = keyframes`
-    100% {
-      color: white;
-    }
-`;
-const subHeadReveal = keyframes`
-
-    50% {
-      width: 100%;
-      left: 0;
-    }
-    100% {
-      left: 100%;
-      width: 0%;
-    }`;
-
-const headingReveal = keyframes`
-
-0%{
-    transform: translateY(100%)}
-  100%{
-    transform: translateY(0)}
-
-`;
+import styled from 'styled-components';
+import {
+  headingReveal,
+  subTextReveal,
+  subHeadReveal,
+} from '../styles/animations';
 
 const IntroWrap = styled.div`
   user-select: none;
   display: flex;
   align-items: center;
   height: 100vh;
+  @media (max-width: 400px) {
+    padding-left: 0;
+  }
+  @media (max-width: 912px) {
+    padding: 0 1rem;
+  }
 
+  .heading {
+    overflow: hidden;
+
+    h1 {
+      letter-spacing: 2px;
+      transform: translateY(100%);
+      animation: ${headingReveal} 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
+      @media (min-width: 912px) {
+        padding: 0 6rem;
+      }
+      @media (max-width: 400px) {
+        font-size: 5rem;
+      }
+    }
+  }
   .sub-heading {
     display: flex;
     flex-direction: column;
+    letter-spacing: 3px;
+    @media (max-width: 1000px) {
+      padding-left: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
     h2 {
       position: relative;
       color: transparent;
       animation: ${subTextReveal} 0s ease forwards;
       display: inline-block;
+      margin-top: 2rem;
+      z-index: 2;
     }
     h2 span {
       content: '';
@@ -52,53 +63,43 @@ const IntroWrap = styled.div`
       animation-delay: 0.5s;
     }
   }
-
   h2:nth-child(1) {
     animation-delay: 1s;
   }
   h2:nth-child(2) {
-    animation-delay: 1s;
+    animation-delay: 1.5s;
   }
   h2:nth-child(3) {
-    animation-delay: 1.5s;
+    animation-delay: 2s;
   }
 
   h2:nth-child(1) span {
     animation-delay: 0.5s;
   }
   h2:nth-child(2) span {
-    /* animation-direction: reverse; */
-    animation-delay: 0.5s;
-  }
-  h2:nth-child(3) span {
     animation-delay: 1s;
   }
-
-  .heading {
-    margin: 0 20px;
-    overflow: hidden;
-    h1 {
-      transform: translateY(100%);
-      animation: ${headingReveal} 1.7s cubic-bezier(1, 0, 0.3, 0.9) forwards;
-    }
+  h2:nth-child(3) span {
+    animation-delay: 1.5s;
   }
 `;
 
-export const Intro = () => {
+export const Intro = ({ heading, sub1, sub2, sub3 }) => {
   return (
     <IntroWrap>
       <div className="heading">
-        <h1>Ced</h1>
+        <h1>{heading}</h1>
       </div>
       <div className="sub-heading">
         <h2>
-          Coder <span></span>
+          {sub1} <span></span>
         </h2>
         <h2>
-          Explorer<span></span>
+          {sub2}
+          <span></span>
         </h2>
         <h2>
-          Developer <span></span>
+          {sub3} <span></span>
         </h2>
       </div>
     </IntroWrap>
