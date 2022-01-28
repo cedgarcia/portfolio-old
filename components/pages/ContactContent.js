@@ -112,7 +112,12 @@ export const ContactContent = () => {
           </p>
           <div className="links">
             {sociaLinks.map((link) => (
-              <a key={link.key} href={link.href} target="_blank">
+              <a
+                key={link.key}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {link.title}
               </a>
             ))}
