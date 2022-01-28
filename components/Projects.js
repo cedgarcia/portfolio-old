@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import projectsData from '/public/projects.json';
-import { ImageContainer } from '../styles/About.styles';
 
 const ProjectsWrap = styled.div`
-  /* background: red; */
   width: 70%;
   position: relative;
   font-size: 4rem;
@@ -15,27 +13,65 @@ const ProjectsWrap = styled.div`
   }
   @media (max-width: 768px) {
     margin: 0 auto;
+    margin-top: 3.5rem;
+  }
+  @media (max-width: 520px) {
+    margin-top: 5rem;
   }
   .project {
     padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .info {
+        transform: translateX(10%);
+        text-align: left;
+      }
+      .image {
+        transform: translateX(-10%);
+      }
+      .technologies {
+        justify-content: flex-start;
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        .info {
+          transform: translateX(-10%);
+        }
+        .image {
+          transform: translateX(0);
+        }
+      }
+    }
     @media (max-width: 768px) {
       flex-direction: column;
+      padding-bottom: 7rem;
+    }
+    @media (max-width: 520px) {
+      padding-bottom: 8rem;
+    }
+    @media (max-width: 450px) {
+      padding-bottom: 12rem;
+    }
+    @media (max-width: 370px) {
+      padding-bottom: 18rem;
     }
     .image {
       width: 55rem;
-      transform: translateX(10%);
       filter: saturate(1);
       transition: 0.3s ease-in-out;
+      transform: translateX(10%);
+
       @media (max-width: 912px) {
         width: 40rem;
       }
       @media (max-width: 768px) {
         transform: translateX(0%);
         width: 100%;
-        filter: grayscale(1);
+        filter: brightness(2);
         opacity: 0.4;
       }
       &:hover {
@@ -51,9 +87,10 @@ const ProjectsWrap = styled.div`
     .info {
       transform: translateX(-10%);
       text-align: right;
+
       @media (max-width: 768px) {
         text-align: left;
-        transform: translate(0, -25rem);
+        position: absolute;
         background-color: var(--black);
         opacity: 0.7;
         width: 100%;
