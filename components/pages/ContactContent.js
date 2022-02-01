@@ -9,11 +9,11 @@ const ContactWrap = styled.div`
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  z-index: 300;
-  height: 16rem;
+  /* z-index: 300; */
   position: absolute;
   transition: 0.5s;
   width: 100vw;
+
   .contact-details {
     display: flex;
     justify-content: space-between;
@@ -23,6 +23,7 @@ const ContactWrap = styled.div`
     margin: 0 auto;
     @media (max-width: 768px) {
       flex-direction: column;
+      top: 10rem;
     }
   }
   @media (max-width: 768px) {
@@ -42,6 +43,7 @@ const LinkWrap = styled.div`
   font-family: 'Fira Sans', sans-serif;
   display: flex;
   flex-direction: column;
+  z-index: 300;
   h2 {
     font-size: 2rem;
   }

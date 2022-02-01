@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const FormWrap = styled.div`
   width: 50vw;
   max-width: 800px;
+  z-index: 500;
   @media (max-width: 912px) {
     width: 70vw;
   }
