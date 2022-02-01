@@ -72,12 +72,12 @@ export const AboutContent = () => {
     <>
       <AboutWrap>
         <div className="heading">
-          <h1>Hi, I'm Cedrick</h1>
+          <h1>Hi, I&apos;m Cedrick</h1>
         </div>
         <div className="info-wrap">
           <p className="info">
-            I'm a front-end developer focused on making responsive, functional
-            and engaging web projects.
+            I&apos;m a front-end developer focused on making responsive,
+            functional and engaging web projects.
           </p>
           <p>
             <strong>Working happily with...</strong>
