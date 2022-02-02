@@ -3,6 +3,22 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const NavWrap = styled.nav`
+  img {
+    position: absolute;
+    width: 7rem;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+    filter: brightness(1);
+    &:hover {
+      filter: brightness(1.5);
+    }
+
+    @media (max-width: 912px) {
+      display: none;
+    }
+  }
   position: fixed;
   left: 0;
   right: 0;
@@ -98,6 +114,9 @@ export const Navbar = () => {
   const router = useRouter();
   return (
     <NavWrap>
+      <a href="/" rel="noopener noreferrer">
+        <img src="/logo.png" />
+      </a>
       {navLinks.map((link) => (
         <NavLink key={link.title}>
           <Link href={link.path} passHref>
