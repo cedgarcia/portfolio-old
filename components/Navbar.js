@@ -115,9 +115,9 @@ export const Navbar = () => {
   const router = useRouter();
   return (
     <NavWrap>
-      <a className="logo" href="/" rel="noopener noreferrer">
+      <Link className="logo" href="/" rel="noopener noreferrer">
         <img src="/logo.png" />
-      </a>
+      </Link>
       {navLinks.map((link) => (
         <NavLink key={link.title}>
           <Link href={link.path} passHref>

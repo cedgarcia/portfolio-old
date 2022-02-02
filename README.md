@@ -1,9 +1,9 @@
 <p align="center">
-    <img width="75" src="./public/logo.png" alt="Codepen Clone Suhail Kakar" />
+    <img width="75" src="./public/logo.png" />
 </p>
 
 <p align="center">
-  My first  <a href="https://brittanychiang.com" target="_blank">portfilio</a>, which I created with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>
+  My first  <a href="https://brittanychiang.com" target="_blank">Portfolio</a>, which I created with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 <hr/>
 
