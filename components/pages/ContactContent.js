@@ -108,7 +108,7 @@ export const ContactContent = () => {
         <LinkWrap>
           <h2>Say Hello!</h2>
           <p>
-            Feel free to get in touch with me. I am always open to discussing
+            Feel free to contact me. I am always open to discussing
             new projects, creative ideas or opportunities to be part of your
             visions.
           </p>

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const NavWrap = styled.nav`
-  img {
+  .logo {
     position: absolute;
     width: 7rem;
     left: 0;
@@ -17,6 +17,7 @@ const NavWrap = styled.nav`
 
     @media (max-width: 912px) {
       display: none;
+      width: 0;
     }
   }
   position: fixed;
@@ -114,7 +115,7 @@ export const Navbar = () => {
   const router = useRouter();
   return (
     <NavWrap>
-      <a href="/" rel="noopener noreferrer">
+      <a className="logo" href="/" rel="noopener noreferrer">
         <img src="/logo.png" />
       </a>
       {navLinks.map((link) => (

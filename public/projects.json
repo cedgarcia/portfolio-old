@@ -2,7 +2,7 @@
   {
     "id": 3,
     "title": "Planets Fact",
-    "description": "A website that displays certain information about the selected planet. Mapped data from a JSON file and used hooks in handling states.",
+    "description": "A website that displays specific information about the planet you've chosen. Data was mapped from a JSON file, and hooks were used to handle states.",
     "image": "/images/projects/planets-fact.png",
     "github": "https://github.com/cedcodes/planets-fact",
     "live": "https://ced-planets-fact.netlify.app/",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Maze Generator",
-    "description": "This project was created following a Youtube tutorial. Added a functionality where the user can select the number of grid being rendered.",
+    "description": "This project was made in response to a YouTube tutorial. Added a feature that allows the user to specify the number of grids to be rendered.",
     "image": "./images/projects/maze.png",
     "github": "https://github.com/cedcodes/Maze-generator",
     "live": "https://ced-maze-generator.vercel.app/",
