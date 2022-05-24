@@ -4,7 +4,7 @@
     "title": "Planets Fact",
     "description": "A website that displays specific information about the planet you've chosen. Data was mapped from a JSON file, and hooks were used to handle states.",
     "image": "/images/projects/planets-fact.png",
-    "github": "https://github.com/cedcodes/planets-fact",
+    "github": "https://github.com/cedgarcia/planets-fact",
     "live": "https://ced-planets-fact.netlify.app/",
     "techs": ["React", "Styled-Components", "Netlify"]
   },
@@ -13,7 +13,7 @@
     "title": "Maze Generator",
     "description": "This project was made in response to a YouTube tutorial. Added a feature that allows the user to specify the number of grids to be rendered.",
     "image": "./images/projects/maze.png",
-    "github": "https://github.com/cedcodes/Maze-generator",
+    "github": "https://github.com/cedgarcia/Maze-generator",
     "live": "https://ced-maze-generator.vercel.app/",
     "techs": ["HTML", "CSS", "Javascript"]
   },
@@ -22,7 +22,7 @@
     "title": "Photosnap",
     "description": "A marketing site for a photo-sharing app. Built reusable components using Compound Component pattern. ",
     "image": "/images/projects/photosnap.png",
-    "github": "https://github.com/cedcodes/Photosnap",
+    "github": "https://github.com/cedgarcia/Photosnap",
     "live": "https://ced-photosnap.netlify.app/",
     "techs": ["React", "React-router-v6", "Styled-Components"]
   }

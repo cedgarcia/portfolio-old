@@ -89,12 +89,12 @@ const LinkWrap = styled.div`
 `;
 
 const sociaLinks = [
-  { key: 'github', title: 'Github', href: 'https://github.com/cedcodes' },
-  {
-    key: 'linkedin',
-    title: 'Linkedin',
-    href: 'https://www.linkedin.com/in/cedgarcia/',
-  },
+  { key: 'github', title: 'Github', href: 'https://github.com/cedgarcia' },
+  // {
+  //   key: 'linkedin',
+  //   title: 'Linkedin',
+  //   href: 'https://www.linkedin.com/in/cedgarcia/',
+  // },
   { key: 'email', title: 'Mail', href: 'mailto:icedgarcia@gmail.com' },
 ];
 
