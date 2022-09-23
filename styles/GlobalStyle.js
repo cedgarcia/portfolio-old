@@ -4,13 +4,14 @@ import { headingReveal } from '../styles/animations';
 export const GlobalStyle = createGlobalStyle`
 
 :root{
-  --black:#000000;
-  --gray:#212121;
+  --black:#020c1b;
+  --gray:#0a192f;
   --medGray:#060606;
   --lightGray: #CACDE8;
 
   --white:#FFFFFF;
-  --green:#1FEA00;
+  /* --green:#64ffda; */
+  --green:#57cbff;
   --darkGreen:#27A102;
 
 }
