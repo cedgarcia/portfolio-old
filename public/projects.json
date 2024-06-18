@@ -1,21 +1,5 @@
 [
   {
-    "id": 5,
-    "title": "AFEX Asia Food Expo",
-    "description": "Executed a comprehensive website revision project tailored for the client's 2024 event, meticulously incorporating their feedback and specific requirements to enhance user experience and functionality. ",
-    "image": "/images/projects/afex.png",
-    "live": "https://www.asiafoodexpo.ph/",
-    "techs": ["ReactJS", "Tailwind", "AWS"]
-  },
-  {
-    "id": 4,
-    "title": "Venum Philippines",
-    "description": "Transitioned the Venum Philippines website to the Shopify platform. Collaborated extensively with clients to understand their needs and effectively deliver unique solutions.",
-    "image": "/images/projects/venum.png",
-    "live": "https://venumfight.com.ph/",
-    "techs": ["Shopify"]
-  },
-  {
     "id": 3,
     "title": "Planets Fact",
     "description": "A website that displays specific information about the planet you've chosen. Data was mapped from a JSON file, and hooks were used to handle states.",
