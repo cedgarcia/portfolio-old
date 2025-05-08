@@ -76,7 +76,7 @@ export const AboutContent = () => {
         </div>
         <div className="info-wrap">
           <p className="info">
-            I&apos;m a front-end developer focused on building responsive,
+            I&apos;m a Full-stack developer focused on building responsive,
             functional and engaging web projects.
           </p>
           <p>
